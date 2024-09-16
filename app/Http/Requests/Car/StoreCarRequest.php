@@ -20,10 +20,10 @@ class StoreCarRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'model_name' => ['required', 'string', 'min:10', 'max:255'],
+            'model_name' => ['required', 'string', 'min:3', 'max:255'],
             'brand' => ['required', 'string', 'unique:cars,brand'],
             'color' => ['required', 'string', 'max:40'],
-            'year' => ['required', 'integer', 'max:4'],
+            'year' => ['required', 'integer', 'digits:4'],
             'release_date' => ['required', 'date'],
         ];
     }

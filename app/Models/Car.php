@@ -14,7 +14,7 @@ class Car extends Model
     /**
      * @return string[]
      */
-    public $protected = [
+    protected $fillable = [
         'model_name',
         'brand',
         'color',
